@@ -15,7 +15,7 @@
 本项目整理了我在申请季中使用的所有武汉纺织大学相关模板，包括但不限于：
 
 - 推荐信模板 (Letter of Recommendation)
-- 个人陈述模板 (Statement of Purpose)
+- 个人陈述模板 (Statement of Purpose, or `Personal Statement')
 - 简历模板 (CV)
 
 另外，我还整理了适用于**武汉纺织大学**的毕业论文模板。
