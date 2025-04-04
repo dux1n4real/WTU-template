@@ -1,35 +1,65 @@
 # WTU-template
 
-## 前言
+[English](#english) | [中文](#chinese)
 
-作者：杜鑫;
-机构：武汉纺织大学经济学院;
-最近更新时间：2025 年 4 月.
+<h2 id="english">English Version</h2>
+
+## About
+
+- **Author**: Xin Du
+- **Institution**: School of Economics, Wuhan Textile University
+- **Last Updated**: April 2025
+
+## Project Introduction
+
+This project contains various templates used during US PhD application process. These templates were collected, improved, and are now shared to help Wuhan Textile University students with their PhD applications to US universities and other countries.
+
+## Templates Included
+
+- Letter of Recommendation Template
+- Statement of Purpose Template
+- CV Template
+- WTU Thesis Template
+
+## Usage
+
+1. Download and extract the project zip package
+2. Open and modify the relevant template
+3. Customize content as needed
+4. Submit according to school requirements
+
+## Disclaimer
+
+This project is for reference only. Users must ensure authenticity of materials and comply with academic integrity.
+
+---
+
+<h2 id="chinese">中文版本</h2>
+
+## 关于
+
+- **作者**：杜鑫
+- **机构**：武汉纺织大学经济学院
+- **更新时间**：2025年4月
 
 ## 项目介绍
 
-本项目是作者在申请美国 PhD 过程中使用的各种模板，从网络上收集并加以改正和完善，供大家参考。帮助武汉纺织大学的学生在申请美国 (或者其他国家) PhD 项目时节省时间和精力。
+本项目收录了申请美国PhD过程中使用的各类模板。这些模板经过收集和改进，旨在帮助武汉纺织大学的学生申请美国及其他国家的PhD项目。
 
-另外，为了使模板更具有普遍性，我对原本借鉴的模板的内容进行了修改和删减，以便适用于其他学校的申请。
-
-本项目整理了我在申请季中使用的所有武汉纺织大学相关模板，包括但不限于：
+## 包含模板
 
 - 推荐信模板 (Letter of Recommendation)
-- 个人陈述模板 (Statement of Purpose, or `Personal Statement')
+- 个人陈述模板 (Statement of Purpose)
 - 简历模板 (CV)
+- 武汉纺织大学毕业论文模板
 
-另外，我还整理了适用于**武汉纺织大学**的毕业论文模板。
+## 使用方法
 
-## 使用说明
-
-1. 下载本项目的 zip 包，解压缩到本地计算机。
-2. 打开相应的模板文件，按照自己的需求进行修改。
-3. 根据需要添加或删除内容。
-4. 保存修改后的文件，按照申请学校的要求进行提交。
-
-## 贡献指南
-欢迎其他武汉纺织大学的同学或校友贡献您使用过的模板或对现有模板提出改进建议。请通过 Pull Request 或 Issues 参与项目建设。或者直接 email to: hhkaaen@hotmail.com
+1. 下载并解压项目包
+2. 打开并修改相应模板
+3. 根据需要自定义内容
+4. 按照学校要求提交
 
 ## 免责声明
 
-本项目仅供参考，不保证申请结果。使用者需遵守学术诚信原则，确保提交材料的真实性。
+本项目仅供参考。使用者需确保材料真实性并遵守学术诚信。
