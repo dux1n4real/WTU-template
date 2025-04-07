@@ -1,0 +1,48 @@
+\documentclass{WTUletter}
+\usepackage{tikz,hyperref,graphicx,changes}
+\hypersetup{hidelinks}
+
+% 开头部分信息// title head message box
+\department{School of Economics}
+\university{Wuhan Textile University}
+\addressone{Yangguang Blvd}
+\addresstwo{Wuhan 430200 P.R. China}
+\phone{027-12345678}
+\email{Non}
+\web{https://fe.wtu.edu.cn/}
+
+\date{\today}
+\recipient{Admission Committee}
+
+
+
+% 结尾信息填写// Ending message box
+\writer{Xiao Hong}
+
+% 如果有签名就加入 `\signature{picturename.png}'，如果没有就不管// if you have a signature, input `\signature{picturename.png}', if you don't, leave it alone
+\writertitle{Associate Prof.,\\ Director of Graduate studies,}
+\writeraffiliation{School of Economics, Wuhan Textile University}
+
+% 加入水印// add watermark
+\watermark{wtu_logo.png}
+
+\begin{document}
+	\vspace*{-0.5in}
+	\maketitlehead
+	\tikz[overlay]\path[opacity=0.1](0,0); % this line of code is to make sure the watermark in the page one stay gray.
+	
+	% 正文// main text
+	I hope this letter finds you well. My name is Xiao Hong, a seasoned business strategist with a deep understanding of market dynamics and competitive landscapes. It is with great pleasure that I write to recommend an exceptionally promising young professional, Xin Du, for a position within your esteemed organization.
+	
+	Having worked under my tutelage for several years, Xin has consistently demonstrated a remarkable capacity for critical thinking and strategic planning. His ability to analyze complex scenarios and devise effective solutions is truly outstanding. He exhibits a level of poise and deliberation that belies his years, making him uniquely suited for high-stakes environments.
+		
+	\highlight{This paragraph means nothing} Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+	
+	\highlight{This paragraph means nothing} Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+	
+	\highlight{This paragraph means nothing} Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+	
+	\highlight{This paragraph means nothing} Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+	
+	\closing
+\end{document}
