@@ -1,0 +1,319 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                   声明和基本信息
+%            Statement and basic information
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% 2025-3-24 v1.0
+% 作者：杜鑫// 机构：武汉纺织大学经济学院// 联系方式：hhkaaen@hotmail.com (欢迎联系！)
+% Author: Xin Du// Institution: School of Economics, Wuhan Textile University// Email: hhkaaen@hotmail.com (open to suggestions!)
+%
+% 祝各位在毕业季都一路顺风! Bon voyage!
+% may all the graduate have a good trip!
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                   基本设置
+%                  basic setup
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[]{WTUthesis}
+\usepackage{afterpage,newtxmath,newtxtext,hyperref,titlesec,tabularx,threeparttable,booktabs,graphicx,caption,cleveref,listings}
+
+\captionsetup[table]{labelsep=space,skip=0pt,labelfont=bf}
+\captionsetup[figure]{labelsep=space,skip=12pt,labelfont=bf}
+
+% 如果需要取消链接的带有颜色的方框，请添加以下代码:
+% if you need to cancel the color frame of the link, add:
+% \hypersetup{colorlinks=false,hidelinks}
+
+
+% 表格设置// table setup
+\renewcommand{\toprule}{\noalign{\vskip2pt}\specialrule{1.5pt}{0pt}{0pt}\noalign{\vskip2pt}}
+\renewcommand{\midrule}{\noalign{\vskip2pt}\specialrule{0.75pt}{0pt}{0pt}\noalign{\vskip2pt}}
+\renewcommand{\bottomrule}{\noalign{\vskip2pt}\specialrule{1.5pt}{0pt}{0pt}\noalign{\vskip2pt}}
+
+% 公式，图，表的引用格式// reference form for equations, figures, and tables
+\crefname{equation}{公式}{公式}
+\crefname{figure}{图}{图}
+\crefname{table}{表}{表}
+\creflabelformat{equation}{#2(#1)#3}  % 显示为"公式(1)"
+\creflabelformat{figure}{#2#1#3}      % 显示为"图1"
+\creflabelformat{table}{#2#1#3}       % 显示为"表1"
+
+% 中文封面页//Chinese title page
+\classification{AB123.45}
+\UDC{678}
+\schoolcode{10495}
+\secretlevel{公开}
+
+\title{这是一个武汉纺织大学的 \LaTeX 毕业论文模板}
+\author{杜鑫}
+\studentid{1234567890}
+\advisor{小红\ 副教授}
+\department{经济学}
+\major{应用经济学}
+\direction{国际贸易}
+\completedate{二零二五年五月}
+
+% 英文封面页//English titlepage
+\engdegree{M.A. Dissertation}
+\engtitle{This is \LaTeX\ Template for WTU graduate dissertation}
+\engauthor{Du Xin}
+\engadvisor{Associate Pf. Xiao Hong}
+\engdate{May 2025}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                     这是分割线
+%                this is a seperate line
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+	
+	% 生成封面// titlepage
+	\maketitle
+	
+	% 空页//blank page
+	\cleardoublepage
+	
+	% 英文封面//english title page
+	\maketitletwo
+	
+	% 独创性声明
+	\newpage
+	\thispagestyle{empty}
+	
+	\begin{center}
+		\fontsize{14pt}{17.5pt}\selectfont\kaishu\bfseries 独创性声明和版权使用授权书
+	\end{center}
+	
+	{
+	\fontsize{12pt}{15pt}\selectfont\kaishu
+	本人郑重声明：所呈交的学位论文，是本人在导师的指导下，独立进行研究工作所取得的成果。除文中已经注明引用的内容外，本论文不包含任何其他个人或集体已经发表或撰写过的作品成果。对本文的研究作出重要贡献的个人和集体，均已在文中以明确方式标明。本声明的法律结果由本人承担。
+	}
+	
+	\vspace{4em}
+	
+	学位论文作者签名：\hfill 签字日期：\quad\quad 年\quad 月\quad 日
+	
+	\vspace{18em}
+	
+	\begin{center}
+		\fontsize{14pt}{17.5pt}\selectfont\kaishu\bfseries 独创性声明和版权使用授权书
+	\end{center}
+	
+	{
+	\fontsize{12pt}{15pt}\selectfont\kaishu
+	本学位论文作者完全了解 \underline{\textbf{武汉纺织大学}} 有关保留、使用学位论文的规定。特授权 \underline{\textbf{武汉纺织大学}} 可以将学位论文的全部或部分内容编入有关数据库进行检索，并采用影印、缩印或扫描等复制手段保存、汇编以供查阅和借阅。同意学校向国家有关部门或机构送交论文的复印件和磁盘。（保密的学位论文在解密后适用本授权说明）
+	}
+	
+	\vspace{4em}
+	
+	学位论文作者签名：\hfill 导师签名：\makebox{\hspace{7em}}
+
+	签字日期：\quad\quad 年\quad 月\quad 日 \hfill 签字日期：\quad\quad 年\quad 月\quad 日
+	
+	% 中文摘要页面//Chinese abstract page
+	\cleardoublepage
+	\abstract{本模板完全按照武汉纺织大学硕士毕业论文模板进行修改，除了某一些中文字体在 \LaTeX\ 中没有以外，其他格式基本保持一致。这些字体包括：楷体 GB\_2312, 仿宋 GB\_2312。该模板是作者在经历了毕业论文排版的痛苦之后，根据之前的 \LaTeX\ 基础，外加 Claude 的辅助，创立了该模板，希望能帮到各位即将毕业的纺大学子。\\
+	\indent 对于武汉纺织大学对硕士论文的要求，研究生院并没有发布官方文件，但是可以在传媒学院的官方网站找到，\href{https://cm.wtu.edu.cn/info/1032/1263.htm}{-link-}
+	}
+	\keywords{\LaTeX；模板；毕业}
+	\researchtype{应用研究}
+	\makeabstract
+	
+	
+	% 英文摘要页面//English abstract page
+	\engabstract{This template is modified according to the graduate thesis `Word' template of Wuhan Textile University. Except for some Chinese fonts that are not available in \LaTeX, other formats are basically consistent. These fonts include: KaiTi\_GB2312, FangSongGB\_2312. After experiencing the pain of typesetting the graduation thesis, the author created this template based on the previous \LaTeX\ experience, plus the assistance of Claude (AI), hoping to help the students of WTU who are about to graduate.}
+	\engkeywords{\LaTeX; Template; Graduate}
+	\engresearchtype{applied research}
+	\engmakeabstract
+	
+	
+	% 生成目录
+	\cleardoublepage
+	\pagestyle{tocpage}
+	\pagenumbering{Roman}
+	\tableofcontents
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%                     正文内容
+	%                   main body content
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	
+	\clearpage
+	\pagenumbering{arabic}
+	\pagestyle{thesis}	
+	\chapter{绪论}
+
+	\section{研究背景}
+	
+	\subsection{理论背景}
+	
+	一级标题三号黑体，居中，1.25 倍行距，段前、段后各设为 0.5 行。所有二级标题为四号黑体，左对齐， 1.25 倍行距，段前、段后各设为 0.5 行，不接排。所有三级标题为小四号黑体，左对齐，1.25 倍行距，段前、段后各设为 0.5 行，不接排。
+	
+	全文一律采用无网格、小四号宋体字，行距为 1.25 倍,段前段后不空行。全文所有英文和数字用小四 Times New Roman 字体，段落首行缩进“两个字符”。
+	
+	每页页边距上边 35mm，下边 30mm；左、右留边 25mm。页眉上边距为 15mm；页脚下边距为 15mm，装订线为 0 cm。
+	
+	为了方便排版，如果英文或者数字与中文挨着，比如出现“正如 Brian (2025) 所说”或者“今年是 2025 年”的情况，最好将英文 or 数字与中文隔一个空格，这样做不仅排版好看，而且还可以不影响 \LaTeX\ 的自动换行。
+	
+	\subsection{现实背景}
+	
+	(这段文字没有意义) Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+	
+	\newpage
+	
+	\section{研究意义}
+	
+	\subsection{理论意义}
+	
+	Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+	
+	\subsection{现实意义}
+	
+	Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+	
+	\newpage
+	
+	\section{研究创新与不足}
+	
+	\subsection{研究创新}
+	
+	Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+	
+	Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+	
+	\subsection{研究不足}
+	
+	Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+	
+	\section{相关文献综述}	
+	
+	\subsection{X 的经济后果}
+	
+	Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+	
+	Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+	
+	\subsection{Y 的影响因素}
+	
+	Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+	
+	Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+	
+	\subsection{X 对 Y 的影响研究}
+	Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+	
+	\newpage
+	
+	Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+	
+	\chapter{理论机制}
+	
+	\section{影响机制 M1}
+	
+	Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+	
+	\newpage
+	
+	\section{影响机制 M2}
+	
+	Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+	
+	\begin{figure}[!ht]
+		\centering
+		\includegraphics[width=0.8\textwidth]{./white.png}
+		\caption{这是一张图片}
+		\label{fig_white}
+	\end{figure}
+	
+	在\cref{fig_white} 中，表示$\cdots$
+	
+	\chapter{计量模型与数据说明}
+	
+	Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+	
+	\begin{equation}\label{reg1}
+		Y_{it}=\beta\cdot D_{it}+X'_{it}\Gamma+\delta_{i}+\delta_t+\varepsilon_{it}
+	\end{equation}
+	
+	在\cref{reg1} 中，$\cdots$
+	
+	\newpage
+	
+	Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+	
+	\begin{equation}\label{reg2}
+		Y_{it}=\beta\cdot D_{it}\cdot H_{it}+X'_{it}\Gamma+\delta_{i}+\delta_t+\varepsilon_{it}
+	\end{equation}
+	
+	在\cref{reg2} 中，$\cdots$
+	
+	\chapter{实证结果}
+	
+	Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+	
+	如\cref{baseline} 所示，$\cdots$
+	
+	\begin{table}[htbp]
+		\centering
+		\caption{基准回归结果}
+		\label{baseline}
+		\begin{threeparttable}
+			\begin{tabularx}{\textwidth}{l*{4}{X}}
+				\toprule
+				& (1) & (2) & (3) & (4) \\ 
+				& Y & Y & Y & Y \\ \midrule
+				D & -0.024*** & -0.050*** & -0.014*** & -0.044*** \\
+				& (-4.96) & (-3.88) & (-3.09) & (-3.26) \\
+				X1 &  &  & 0.593*** & 2.267*** \\
+				&  &  & (9.70) & (6.54) \\
+				X2 &  &  & 0.088** & 0.253*** \\
+				&  &  & (2.23) & (3.73) \\
+				X3 &  &  & 0.331*** & 0.404*** \\
+				&  &  & (7.65) & (4.97) \\
+				X4 &  &  & -0.168 & -1.041** \\
+				&  &  & (-0.46) & (-2.23) \\
+				X5 &  &  & 0.150 & -0.005 \\
+				&  &  & (1.54) & (-0.04) \\
+				X6 &  &  & -0.018 & -1.016** \\
+				&  &  & (-0.12) & (-1.99) \\
+				Constant & -2.058*** & -0.696*** & -9.196*** & -15.569*** \\
+				& (-41.31) & (-6.20) & (-27.00) & (-12.40) \\
+				Observations & 34,409 & 18,039 & 34,409 & 18,039 \\
+				company   FE & NO & \checkmark & NO & \checkmark \\
+				time   FE & NO & \checkmark & NO & \checkmark \\
+				R-squared & 0.00219 & 0.174 & 0.0640 & 0.191 \\ \bottomrule
+			\end{tabularx}
+			\begin{tablenotes}
+				\footnotesize
+				\item[a] Robust standard error clustered at firm level. Robust t-statistics in parentheses. Subsequent tables are the same.
+				\item[b] *** p$<$.01, ** p$<$.05, * p$<$.1
+			\end{tablenotes}
+		\end{threeparttable}
+	\end{table}
+
+	\chapter{结论与政策建议}
+	
+	这是一个结论，$\cdots$
+	
+	\chapter*{参考文献}\markboth{参考文献}{}
+	
+	关于参考文献这一章，各位可以单独开启一章，比如现在这样，又或者使用：
+	
+	\begin{lstlisting}
+		\bibliographystyle{apalike}
+		\bibliography{reference}
+	\end{lstlisting}
+	
+	第一行代码是确定引用文章的风格，第二行代码的括号中输入参考文献的文件名，放在同一文件夹下。
+	
+	\chapter*{附录Ⅰ 本人在攻读学位期间取得的成果}\markboth{附录Ⅰ本人在攻读学位期间取得的成果}{}
+	
+	\noindent Xin Du, Xiao Hong. 2025 ``\LaTeX\ for graduate Thesis: evidence from Wuhan Textile University template'' \textbf{\textit{Journal of Xin Du}}, \textit{Accepted}.
+	
+	\chapter*{致谢}\markboth{致谢}{}
+	
+	感谢 $\cdots$ 的长期支持，谢谢！
+	
+\end{document}
