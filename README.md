@@ -12,7 +12,7 @@
 
 ## Project Introduction
 
-This project contains various templates used during US PhD application process. These templates were collected, improved, and are now shared to help Wuhan Textile University students with their PhD applications to US universities and other countries.
+This project contains various templates used by author during US PhD application process. These templates were collected, improved, and are now shared to help Wuhan Textile University students with their PhD applications to US universities and other countries. Also, these template are moderated so you can turn it into other school's template.
 
 ## Templates Included
 
@@ -44,7 +44,7 @@ This project is for reference only. Users must ensure authenticity of materials 
 
 ## 项目介绍
 
-本项目收录了申请美国PhD过程中使用的各类模板。这些模板经过收集和改进，旨在帮助武汉纺织大学的学生申请美国及其他国家的PhD项目。
+本项目包含了作者在申请美国 PhD 过程中使用的各类模板。这些模板经过收集和改进，旨在帮助武汉纺织大学的学生申请美国及其他国家的 PhD 项目。另外，作者在原模板的基础上进行了优化，将模板修改为其他学校的背景也更方便
 
 ## 包含模板
 
