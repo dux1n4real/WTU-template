@@ -19,7 +19,7 @@ This project contains various templates used by author during US PhD application
 - Letter of Recommendation Template
 - Statement of Purpose Template
 - CV Template
-- WTU Thesis Template
+- WTU Dissertation Template
 
 ## Usage
 
